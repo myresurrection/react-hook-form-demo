@@ -1,7 +1,9 @@
 // Componente reutilizable para mostrar errores de validación.
 // Recibe el mensaje directamente desde `errors.<campo>?.message` de React Hook Form.
 // Si no hay mensaje, no renderiza nada.
-type Props = { message?: string }
+type Props = {
+  message?: string
+}
 
 export default function ErrorMessage({ message }: Props) {
   if (!message) return null

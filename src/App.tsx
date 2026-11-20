@@ -26,11 +26,8 @@ function App() {
   //    - reset: vuelve el formulario a defaultValues
   //    - formState: estado del form (errores, si está enviando, si se envió OK...)
   const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
-  } = useForm<EmailFormValues>({
+    register, handleSubmit, reset, formState: { errors, isSubmitting, isSubmitSuccessful },
+  } = useForm({
     defaultValues: { to: '', subject: '', body: '' },
     mode: 'onTouched', // valida al salir del campo, y luego en cada cambio
   })
